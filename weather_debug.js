@@ -8,7 +8,6 @@ alert("start");
                   // Got the data - parse it and return the temperature
                   temperature = "meep"; //weather_data['main']['temp'];
                   callback(temperature);
-              }
+              }alert(temperature);
         });
     
-alert(temperature);
