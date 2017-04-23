@@ -8,6 +8,8 @@
         return {status: 2, msg: 'Ready'};
     };
 
+    alert(temperature);
+    
     ext.get_temp = function(location, callback) {
         // Make an AJAX call to the Open Weather Maps API
         $.ajax({
