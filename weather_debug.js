@@ -8,8 +8,11 @@ $( document ).ready(function () {
               success: function( weather_data ) {
                   // Got the data - parse it and return the temperature
                   temperature = weather_data['main']['temp'];
-                  alert(temperature);
                   //callback(temperature);
               } 
         });
+        
+        alert(temperature);
 });
+
+
