@@ -12,4 +12,4 @@ get_temp = function(callback) {
               } 
         });
 };
-     alert(get_temp);
+     alert(callback);
