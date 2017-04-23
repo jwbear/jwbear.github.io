@@ -9,7 +9,5 @@ alert("start");
                   temperature = "meep"; //weather_data['main']['temp'];
                   callback(temperature);
               } 
-        }
-              alert(temperature);
-);
-    
+        });
+     alert("end");
