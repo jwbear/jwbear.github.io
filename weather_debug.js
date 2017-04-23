@@ -7,8 +7,8 @@ $( document ).ready(function () {
               dataType: 'jsonp',
               success: function( weather_data ) {
                   // Got the data - parse it and return the temperature
-                  temperature = "meep"; //weather_data['main']['temp'];
-                  alert("meep");
+                  temperature = weather_data['main']['temp'];
+                  alert(temperature);
                   //callback(temperature);
               } 
         });
