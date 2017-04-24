@@ -10,8 +10,8 @@ $( document ).ready(function (callback) {
               success: function( tone_data ) {
                   // Got the data - parse it and return the temperature
                   tone = tone_data[document][emotion][joy];
+                  alert(tone_data);
                   callback(tone);
               }
         });
     
-alert(tone);
