@@ -1,4 +1,4 @@
-alert("start");
+
 
         // Make an AJAX call to the Open Weather Maps API
 $( document ).ready(function (callback) {
