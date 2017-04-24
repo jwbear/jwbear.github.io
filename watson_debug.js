@@ -9,8 +9,8 @@ $( document ).ready(function (callback) {
               dataType: 'jsonp',
               success: function( tone_data ) {
                   // Got the data - parse it and return the temperature
-                  tone = tone_data[document][emotion][joy];
-                  alert(tone_data);
+                  tone = tone_data //tone_data[document][emotion][joy];
+                  alert(tone);
                   callback(tone);
               }
         });
