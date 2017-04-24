@@ -14,4 +14,5 @@ $( document ).ready(function (callback) {
                   callback(tone);
               }
         });
+});
     
