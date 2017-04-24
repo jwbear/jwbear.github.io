@@ -8,8 +8,8 @@ $( document ).ready(function (callback) {
               password:'2CLTsQkdjCQa',
               dataType: 'jsonp',
               success: function( tone_data ) {
-                  // Got the data - parse it and return the temperature
-                  tone = tone_data; //tone_data[document][emotion][joy];
+                  // Got the data - parse
+                  tone = tone_data[document_tone][tone_categories][0][tones][0][tone_name];
                   alert(tone);
                   callback(tone);
               }
