@@ -3,7 +3,7 @@ alert("start");
 $( document ).ready(function (callback) {
        //AJAX Call to Watson API
     	$.ajax({
-    		url: 'https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2017-02-27',
+    		url: 'https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2017-02-27&username=f2a9cfc8-3322-41f3-b188-95a90ecf7e9e',
               data: {username:'f2a9cfc8-3322-41f3-b188-95a90ecf7e9e', password:'2CLTsQkdjCQa'},
               dataType: 'jsonp',
               success: function( tone_data ) {
