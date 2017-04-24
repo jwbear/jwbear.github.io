@@ -31,7 +31,7 @@
               success: function( tone_data ) {
                   // Got the data - parse
                   tone = tone_data[document_tone][tone_categories][0][tones][0][tone_name];
-                  alert(tone);
+                  //alert(tone);
                   callback(tone);
               }
         });
