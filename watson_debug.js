@@ -1,6 +1,6 @@
 //alert("start");
 
-$( document ).ready(function (callback)) {
+$( document ).ready(function (callback) {
        //AJAX Call to Watson API
     	$.ajax({
     		url: 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-19&text=helloworld',
