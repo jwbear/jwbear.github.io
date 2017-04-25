@@ -12,8 +12,8 @@ $( document ).ready(function (callback) {
                   // Got the data - parse
                   console.log("hey");
                   tone = tone_data[document_tone][tone_categories][0][tones][0][tone_name];
-                  callback(tone);*/
-              }
+                  callback(tone);
+              }*/
         }); 
 });
     
