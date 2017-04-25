@@ -7,7 +7,7 @@ $( document ).ready(function (callback) {
               username:'f2a9cfc8-3322-41f3-b188-95a90ecf7e9e', 
               password:'2CLTsQkdjCQa',
               dataType: 'jsonp',
-              //jsonpCallback: 'callback',
+              jsonpCallback: 'callback',
               success: function( tone_data ) {
                   // Got the data - parse
                   console.log(tone_data);
