@@ -10,9 +10,8 @@ $( document ).ready(function (callback) {
               success: function( tone_data ) {
                   // Got the data - parse
                   tone = tone_data[document_tone][tone_categories][0][tones][0][tone_name];
-                  alert(tone_data);
                   callback(tone);
               }
-        });
+        }); alert(tone_data);
 });
     
