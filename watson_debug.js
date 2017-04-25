@@ -10,7 +10,7 @@ $( document ).ready(function (callback) {
               jsonpCallback: 'callback',
               success: function( tone_data ) {
                   // Got the data - parse
-                  console.log(tone_data);
+                  console.log("hey");
                   tone = tone_data[document_tone][tone_categories][0][tones][0][tone_name];
                   callback(tone);
               }
