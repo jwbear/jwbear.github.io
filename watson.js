@@ -21,21 +21,83 @@
         });
     };
     
+    
+    //separate ajax call, Watson API not jsonp enabled
+    function watsonTone(sent, callback) {
+
+		  var http = new XMLHttpRequest();
+		  var url = "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-19&text=" + sent;
+		  http.open("GET", url, true);		  
+
+
+		  http.onreadystatechange = function() {//Call a function when the state changes.
+			if(http.readyState == 4 && http.status == 200) {
+				//console.log('signIn responseText: ', http.responseText);
+
+				var response = http.responseText;
+
+				//console.log(response);
+				//get tones from response
+				var responseString = JSON.parse(response);
+				var tones = responseString.document_tone.tone_categories[0].tones;
+
+				//loop over tones choose max tone
+				var tone = "";
+				var max = 0;
+				for (var i=0; i<tones.length; i++){
+					var score = tones[i].score;
+					if(score > max){
+						max = tones[i].score; 
+						tone = tones[i].tone_name;
+						console.log(tone);
+					}
+					
+				}
+				
+				//return dominant tone
+				callback(tone);
+				//console.log(responseString);
+				return;
+			}
+			else {
+			
+				
+				var response = http.responseText;
+				console.log(response);
+
+				//console.log(response);
+				//get tones from response
+				var responseString = JSON.parse(response);
+				var tones = responseString.document_tone.tone_categories[0].tones;
+
+				//loop over tones choose max tone
+				var tone = "";
+				var max = 0;
+				for (var i=0; i<tones.length; i++){
+					var score = tones[i].score;
+					if(score > max){
+						max = tones[i].score; 
+						tone = tones[i].tone_name;
+						console.log(tone);
+					}
+					
+				}
+				
+				//return dominant tone
+				callback(tone);
+				//console.log(responseString);
+				return;
+				
+			}
+		  }
+
+	  http.withCredentials = true;
+	  http.send(null);
+	}
+    
     ext.get_tone = function(sent, callback){
-    	 //AJAX Call to Watson API
-    	$.ajax({
-    		url: 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-19&text='+sent,
-              username:'f2a9cfc8-3322-41f3-b188-95a90ecf7e9e', 
-              password:'2CLTsQkdjCQa',
-              dataType: 'jsonp',
-              success: function( tone_data ) {
-                  // Got the data - parse
-                  tone = tone_data[document_tone][tone_categories][0][tones][0][tone_name];
-                  //alert(tone);
-                  callback(tone);
-              }
-        });
-    };
+    	watsonTone(sent, callback);
+    	}
     
     // Block and block menu descriptions
     var descriptor = {
@@ -46,5 +108,5 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('Weather extension', descriptor, ext);
+    ScratchExtensions.register('Watson extension', descriptor, ext);
 })({});
