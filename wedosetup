@@ -1,0 +1,47 @@
+Scratch WeDo Setup
+
+Go to https://education.lego.com/en-us/downloads/wedo-2
+-	Download wedo 2.0 app for Windows 10 
+-	Install the App
+-	Open the app click the Book Icon
+o	Watch the explore section of Milo Videos: 
+♣	Milo the Science Rover 
+♣	Milo Motions Sensor
+
+Go to scratchx.org/#scratch
+-	If Firefox doesn’t work, try IE
+-	Select “Add An Extension”
+-	Select Lego WeDo 2.0
+
+Go to https://scratch.mit.edu/wedo
+-	Download Scratch Device Manager for Windows 10+
+-	Install Scratch Device Manager
+-	Go to Windows Icon and Run Scratch Device Manager
+-	Go through the steps to pair the Lego WeDo
+o	Open Bluetooth settings and make sure LPF2 Smart Hub is Paired
+o	Connect using Device Manager
+o	Refresh ScratchX page and reload extension
+o	Pairing can be tricky, contact a tech helper if you have trouble
+
+
+Project Goals: Help Milo Find a Plant Specimen on the table using your Scratch Sprite
+
+2 Parts
+
+Scratch Team:
+ One team creates a Sprite to interact with Milo
+-	This Sprite will report what Milo is doing 
+o	Distance (when an object is blocking)
+o	Speed (how fast Milo is going)
+o	Motion
+o	Color of Milos light
+Robot Team:
+ Will learn how to get Milo to do the following
+-	Move forward
+-	Move backward
+-	Change his light color
+-	Stop when he gets too close to a plant specimen
+
+Together:
+ Teams will combine their code so the Sprite tells Milo what to do
+-	The Sprite should tell us when Milo has found the plant specimen
